@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  mba_web:
+    image: node:latest
+    tty: true
+    stdin_open: true
+    command: bash -c "while true; do sleep 1; done"
+    volumes:
+      - .:/app
