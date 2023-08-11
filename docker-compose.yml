@@ -5,6 +5,9 @@ services:
     image: node:latest
     tty: true
     stdin_open: true
-    command: bash -c "while true; do sleep 1; done"
+    working_dir: /app
+    command: bash -c "while true; do sleep 60; done"
     volumes:
       - .:/app
+    ports:
+      - "3000:3000"
